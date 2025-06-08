@@ -1,11 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
+
 <head>
-  <meta charset="UTF-8">
-  <title>My Personal Site</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenneth Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Add your HTML content here -->
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#intro" class="nav-link active">Intro</a></li>
+        <li><a href="#who" class="nav-link">Who</a></li>
+        <li><a href="#content" class="nav-link">Content</a></li>
+        <li><a href="#bots" class="nav-link">Bots</a></li>
+        <li><a href="#websites" class="nav-link">Websites</a></li>
+        <li><a href="#users" class="nav-link">Users</a></li>
+        <li><a href="#data" class="nav-link">Data</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main class="container">
+
+    <section id="intro" class="section">
+      <div class="section-left">
+        <h1>Kenneth Li</h1>
+        <br><br>
+        <div class="control">
+          <div class="resizer">
+            <div class="input masked" id="copyText">
+              Kenneli.cn@gmail.com
+            </div>
+          </div>
+          <button id="copyBtn" aria-label="copy link" title="Copy to clipboard">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect>
+              <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="section-right">
+
+
+
+        <p><strong>This page is created solely for a class projet and should not be considered a personal
+            portfolio.</strong></p><br>
+        <p>You can scroll with your mouse or swipe down to continue browsing.</p>
+      </div>
+    </section>
+
+    <section id="who" class="section">
+      <div class="section-left">
+        <h1>Who</h1>
+        <img src="img/app icons, chat, messages _ messaging, communication, talk, message, conversation.png"
+          alt="Who" />
+      </div>
+      <div class="section-right">
+        <p>Hey, I’m Kenneth, an undergraduate student. I'm lucky to be part of the <em>Global Career Accelerator</em>
+          course. Through this page, let’s get a little closer — from strangers to, well, familiar strangers. Haha.
+          Trust me, you’ll know me a bit better by the end.</p>
+        <p>In life, our interests, experiences, and skills are often tied together. Interests lead to certain
+          experiences, and within those experiences, our abilities naturally show up. So through the following examples,
+          you’ll get to know what I’m into.</p>
+      </div>
+    </section>
+
+    <section id="content" class="section">
+      <div class="section-left">
+        <h1>Content</h1>
+        <img src="img/Design Interface.png" alt="Content" />
+      </div>
+      <div class="section-right">
+        <p>Two years ago, I started running a content creator channel on a video platform. Then last October, while
+          diving into new college courses, I realized that everything is heading toward new technology. 2025 is the age
+          of AI. And today, AI has given most people access to powerful tools with no real barriers.</p>
+        <p>I realized something: if you don’t have tech skills, you chase the tech. But if you <em>do</em> have the
+          skills, it’s all about the content. Once tech stops being a problem, the spotlight moves to content.</p>
+        <p>Original, high-quality content is incredibly important. You can repackage it, remix it, repurpose it — and
+          every version you create from that becomes a valuable asset. But especially in the CS world, most people are
+          just blindly copying or repurposing trendy open-source projects. That’s <em>not</em> new content.</p>
+        <p>So how do you consistently produce high-quality content? That’s the question I care about — and what I’ve
+          been working on for the past two years.</p>
+      </div>
+    </section>
+
+    <section id="bots" class="section">
+      <div class="section-left">
+        <h1>Bots</h1>
+        <img src="img/API.png" alt="Bots" />
+      </div>
+      <div class="section-right">
+        <p>I love writing bot scripts. It feels like I’ve got an army of obedient clones doing my work. It honestly
+          gives me that “overlord” feeling. Bots boost my productivity by tens or even hundreds of times. That’s why I
+          can execute ideas so quickly.</p>
+        <p>Even if a bot moves as slowly as a human, it doesn’t get tired. I can put the task in motion, step away to
+          rest, and the work keeps going. It doesn’t stop.</p>
+        <p>Last week, I found that posting ads in Discord communities gave me a conversion rate of 17% — which is
+          insane. But messages get buried fast in those chats, and I didn’t have time to keep posting manually. So I
+          wrote a bot that auto-rotates my past article copy, assembles them dynamically, and posts them on intervals.
+          The result? A 20–25% increase in traffic. Unreal.</p>
+      </div>
+    </section>
+
+    <section id="websites" class="section">
+      <div class="section-left">
+        <h1>Websites</h1>
+        <img src="img/Web Domain .png" alt="Websites" />
+      </div>
+      <div class="section-right">
+        <p>There’s a real difference between a webpage and a full website. Once you have multiple pages, all kinds of
+          new problems show up. How do you organize the structure? How do you design a scalable system?</p>
+        <p>About a year ago, I got into websites. I’ve built three gaming encyclopedias, the biggest of which has over
+          7,000 pages. SMW (Semantic MediaWiki) turned out to be a powerful and efficient tool — it lets you query page
+          data and generate new content. It’s a game-changer for productivity and makes ongoing maintenance much easier.
+        </p>
+      </div>
+    </section>
+
+    <section id="users" class="section">
+      <div class="section-left">
+        <h1>Users</h1>
+        <img src="img/AB Testing.png" alt="Users" />
+      </div>
+      <div class="section-right">
+        <p>We often talk about UX. To me, UX is really just about how well you understand your users.</p>
+        <p>In reality, most users have only two traits: they’re dumb and lazy.</p>
+        <p>Their ability to comprehend things is <em>shockingly</em> low. Every time I design a feature, I go in with
+          one mindset — even a kid should be able to use this. Don’t expect users to understand <em>you</em>; instead,
+          you have to <em>think like them</em>. How will <em>they</em> act? What will <em>they</em> do?</p>
+        <p>Almost no user is willing to take extra steps. I optimized the site structure so that 99% of all content is
+          reachable in two clicks and two scrolls — max. I bought a three-letter domain name just so users wouldn’t be
+          too lazy to type it. I applied for whitelists on every major platform so that when people click my links, they
+          don’t have to jump through extra redirects.</p>
+        <p>And then there’s the wild variety of devices people use — desktops, phones, iPads, smartwatches, even car
+          navigation screens. Not joking. One visitor <em>actually</em> accessed the site from a car screen. That’s when
+          you really start thinking about responsive design and compatibility — even with ancient Android.</p>
+      </div>
+    </section>
+
+    <section id="data" class="section">
+      <div class="section-left">
+        <h1>Data</h1>
+        <img src="img/Binary code.png" alt="Data" />
+      </div>
+      <div class="section-right">
+        <p>Earlier I mentioned how I made encyclopedia sites for three games by MY.GAMES B.V. . But truth is, I’m not
+          good at
+          games — and I don’t even enjoy playing them.</p>
+        <p>So how do you write 7,000 detailed entries if you don’t play?</p>
+        <p>Unpack the data.</p>
+        <p>I decoded binary data files into readable text. I took 1.8 million lines of deeply nested and chaotic JSON,
+          reconstructed the structure with Python, cleaned it, and built a local database. Using that, I generated web
+          pages with JS scripts and styled them into clean entries using SMW templates.</p>
+        <p>Anyone can download unpacking software, but why, can some people only get images out of it, while I can
+          extract full structured data and build entire websites?</p>
+        <p>Because I spent a full semester systematically learning the Unity engine — and half a year understanding
+          Unreal Engine 5. I know the file structures inside and out. I’ve unpacked <em>a lot</em>. And that experience
+          made all the difference.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

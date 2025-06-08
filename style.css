@@ -1,1 +1,210 @@
-/* Add you CSS here */
+/* === 全局基础样式 === */
+:root {
+  --bg: #0a0a0a;
+  --text: #ddd;
+  --heading: #fff;
+  --highlight: #f4bd32;
+  --highlight-active: #F55d3e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Helvetica Neue', sans-serif;
+  scroll-behavior: smooth;
+  background-color: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+}
+
+/* === 导航栏 === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: var(--bg);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: bold;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.navbar a.active {
+  color: var(--highlight);
+}
+
+.navbar a:hover {
+  color: var(--highlight-active);
+}
+
+/* === 页面容器 === */
+.container {
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
+/* === section 全屏分页样式 === */
+.section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  padding-top: 4rem;
+  scroll-snap-align: start;
+  background-color: var(--bg);
+}
+
+.section-left {
+  flex: 0.8;  /* 左边稍小 */
+  align-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.section-right {
+  flex: 1.2;  /* 右边稍大 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+}
+
+
+.section-left {
+  align-items: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section-left h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--heading);
+}
+
+.section-left img {
+  width: 60%;
+  max-width: 300px;
+}
+
+.section-right p {
+  font-size: 0.8rem; /* 默认稍小 */
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  max-width: 600px;
+  color: var(--text);
+  transition: transform 0.3s ease, font-size 0.3s ease;
+}
+
+.section-right p:hover {
+  transform: scale(1.05);
+  font-size: 1.08rem;
+}
+
+/* === 响应式支持 === */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
+  }
+
+  .section-left,
+  .section-right {
+    padding: 1.5rem 2rem;
+    border-right: none;
+    text-align: center;
+  }
+
+
+  .section-right p {
+    font-size: 0.6rem;
+    margin: 0.6rem auto;
+  }
+
+  .section-left img {
+  width: 20%;
+}
+
+}
+
+
+.control {
+    width: 200px; /* 固定宽度 */
+  display: flex;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background: #1a1a1a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.resizer {
+  width: 200px; /* 固定宽度 */
+  overflow: hidden;
+  border-right: 1px solid #333;
+}
+
+.input {
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #f5f5f5;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  scrollbar-width: none;
+}
+.input::-webkit-scrollbar {
+  display: none;
+}
+
+/* mask：左右遮罩渐隐效果 */
+.masked {
+  mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+
+button {
+  width: 44px;
+  background: #292929;
+  border: none;
+  color: white;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover {
+  background: #444;
+}
+button svg {
+  width: 20px;
+  height: 20px;
+}
